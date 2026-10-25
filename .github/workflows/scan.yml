@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: market-scan
@@ -43,3 +44,7 @@ jobs:
           else
             echo "No dashboard changes to commit."
           fi
+      - name: Redeploy dashboard (pushes by GITHUB_TOKEN do not trigger other workflows)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run static.yml --ref main
