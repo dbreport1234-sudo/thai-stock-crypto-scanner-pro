@@ -1,54 +1,198 @@
 <!doctype html>
-<html lang="en">
+<html lang="th">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1220">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg">
 <title>Thai Stock & Crypto Scanner Pro</title>
 <style>
 :root{color-scheme:dark;--bg:#0b1220;--panel:#121c2e;--line:#26364f;--muted:#9fb0c8;--green:#2ecc71;--red:#ff6b6b;--amber:#f4c15d}
-*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#09111f,#111d32);color:#e9f0fa;font:15px/1.5 system-ui,Segoe UI,sans-serif}
-header{padding:28px max(18px,calc((100vw - 1250px)/2));border-bottom:1px solid var(--line);background:#0c1525}
-h1{margin:0;font-size:clamp(22px,4vw,34px)}.sub{color:var(--muted);margin-top:6px}
-main{max-width:1250px;margin:auto;padding:22px 18px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.card{background:rgba(18,28,46,.94);border:1px solid var(--line);border-radius:14px;padding:16px}.metric{font-size:27px;font-weight:750}.muted{color:var(--muted)}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
-input,select,button{background:#0c1525;color:#e9f0fa;border:1px solid var(--line);border-radius:9px;padding:10px 12px}button{cursor:pointer}button:hover{border-color:#6885b3}
-.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:12px}table{border-collapse:collapse;width:100%;min-width:900px;background:#111b2d}th,td{padding:12px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{color:#b7c8df;background:#17243a;position:sticky;top:0}.pill{padding:4px 8px;border-radius:99px;font-weight:700;font-size:12px}.buy{color:#8ff0b1;background:#123a2a}.sell{color:#ff9d9d;background:#492226}.wait{color:#f4d48a;background:#42351a}.error{color:#ffb3b3}.notice{margin-top:18px;color:var(--muted);font-size:13px}.status{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--amber);margin-right:7px}
-@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:450px){.grid{grid-template-columns:1fr}}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#09111f,#111d32);color:#e9f0fa;font:15px/1.5 system-ui,"Noto Sans Thai",sans-serif;padding-bottom:env(safe-area-inset-bottom)}
+header{padding:calc(20px + env(safe-area-inset-top)) max(16px,calc((100vw - 1250px)/2)) 16px;border-bottom:1px solid var(--line);background:#0c1525;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+h1{margin:0;font-size:clamp(19px,4vw,30px)}.sub{color:var(--muted);font-size:13px}
+main{max-width:1250px;margin:auto;padding:16px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.card{background:rgba(18,28,46,.94);border:1px solid var(--line);border-radius:14px;padding:14px}.metric{font-size:26px;font-weight:750}.muted{color:var(--muted)}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+input,select,button{background:#0c1525;color:#e9f0fa;border:1px solid var(--line);border-radius:9px;padding:10px 12px;font:inherit;min-height:42px}
+button{cursor:pointer}button.primary{background:#1d5fd1;border-color:#2f74ea}button:hover{border-color:#6885b3}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--amber);margin-right:6px}.dot.on{background:var(--green);box-shadow:0 0 8px var(--green)}
+.tablewrap{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+table{border-collapse:collapse;width:100%;background:#111b2d}
+th,td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:left}
+th{color:#b7c8df;background:#17243a;font-size:13px}
+.pill{padding:4px 9px;border-radius:99px;font-weight:700;font-size:12px;white-space:nowrap}
+.buy{color:#8ff0b1;background:#123a2a}.sell{color:#ff9d9d;background:#492226}.wait{color:#f4d48a;background:#42351a}
+.live{font-size:10px;color:var(--green);border:1px solid var(--green);border-radius:4px;padding:0 4px;margin-left:5px;vertical-align:middle}
+.up{color:var(--green)}.down{color:var(--red)}
+.flash-up{animation:fu .8s}.flash-down{animation:fd .8s}
+@keyframes fu{from{background:#123a2a}to{background:transparent}}@keyframes fd{from{background:#492226}to{background:transparent}}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.alertform{display:flex;gap:8px;flex-wrap:wrap}.alertform>*{flex:1 1 120px}
+.item{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.item button{min-height:34px;padding:4px 10px}
+.opts{display:flex;gap:14px;flex-wrap:wrap;margin:10px 0;font-size:14px}.opts label{display:flex;gap:6px;align-items:center}
+#toasts{position:fixed;top:calc(10px + env(safe-area-inset-top));left:10px;right:10px;z-index:99;display:flex;flex-direction:column;gap:8px;pointer-events:none}
+.toast{background:#17325c;border:1px solid #2f74ea;border-radius:12px;padding:12px 14px;box-shadow:0 6px 24px #0008;animation:in .25s;pointer-events:auto;max-width:520px;margin:auto;width:100%}
+.toast.buy{background:#123a2a;border-color:#2ecc71;color:#e9f0fa}.toast.sell{background:#492226;border-color:#ff6b6b;color:#e9f0fa}
+@keyframes in{from{transform:translateY(-14px);opacity:0}}
+.notice{margin-top:16px;color:var(--muted);font-size:12px}h3{margin:18px 0 8px}
+@media(max-width:800px){
+ .grid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}
+ thead{display:none}table,tbody,tr,td{display:block;width:100%}
+ tr{padding:10px 12px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:2px 10px}
+ td{padding:2px 0;border:0}td[data-l]::before{content:attr(data-l);display:block;font-size:11px;color:var(--muted)}
+ td.full{grid-column:1/-1}
+}
 </style></head>
 <body>
-<header><h1>Thai Stock & Crypto Scanner Pro</h1><div class="sub">Signal-only market monitor · Thai equities + crypto · 15-minute scan schedule</div></header>
+<div id="toasts"></div>
+<header>
+ <div><h1>Thai Stock & Crypto Scanner Pro</h1><div class="sub">หุ้นไทย + คริปโต · Signal-only · ไม่ใช่คำแนะนำการลงทุน</div></div>
+ <div><span class="dot" id="wsdot"></span><b id="wsstate">กำลังเชื่อมต่อ…</b></div>
+</header>
 <main>
 <div class="grid">
- <div class="card"><div class="muted">Assets scanned</div><div class="metric" id="total">—</div></div>
- <div class="card"><div class="muted">Buy watch</div><div class="metric" id="buy">—</div></div>
- <div class="card"><div class="muted">Sell / exit watch</div><div class="metric" id="sell">—</div></div>
+ <div class="card"><div class="muted">สินทรัพย์ที่สแกน</div><div class="metric" id="total">—</div></div>
+ <div class="card"><div class="muted">Buy watch</div><div class="metric up" id="buy">—</div></div>
+ <div class="card"><div class="muted">Sell / exit</div><div class="metric down" id="sell">—</div></div>
  <div class="card"><div class="muted">Data errors</div><div class="metric" id="errors">—</div></div>
 </div>
-<div class="toolbar">
- <input id="search" placeholder="Search symbol or name…" aria-label="Search">
- <select id="market"><option value="all">All markets</option><option value="thai">Thai stocks</option><option value="crypto">Crypto</option></select>
- <select id="signal"><option value="all">All signals</option><option>BUY WATCH</option><option>SELL / EXIT WATCH</option><option>WAIT</option><option>INSUFFICIENT_DATA</option></select>
- <button id="refresh">Refresh data</button>
+
+<div class="card" style="margin-top:12px">
+ <div id="last" style="font-weight:700">รอสแกนครั้งแรก</div>
+ <div class="muted" style="font-size:13px">คริปโต = ราคาสดผ่าน Binance WebSocket · หุ้นไทย = อัปเดตตามรอบสแกน (ทุก ~15 นาที, ข้อมูลอาจดีเลย์)</div>
 </div>
-<div class="card" style="margin-bottom:14px"><div><span class="status"></span><b id="last">Waiting for first scan</b></div><div class="muted" id="disclaimer" style="margin-top:7px"></div></div>
-<div class="tablewrap"><table><thead><tr><th>Market</th><th>Symbol</th><th>Signal</th><th>Price</th><th>RSI</th><th>Stop loss*</th><th>Target 1*</th><th>Target 2*</th><th>Reason</th></tr></thead><tbody id="rows"><tr><td colspan="9">Loading…</td></tr></tbody></table></div>
-<div class="notice">* Indicative ATR-based levels, not order instructions. Data providers can delay, omit, or revise candles. This is not financial advice and no strategy guarantees profit. Backtest before use; consider fees, slippage, liquidity, and tax. The dashboard is refreshed when GitHub Actions successfully updates the snapshot.</div>
-<h3>Latest scan errors</h3><div class="card error" id="errorList">None reported</div>
+
+<div class="toolbar">
+ <input id="search" placeholder="ค้นหา symbol / ชื่อ…" style="flex:1 1 160px">
+ <select id="market"><option value="all">ทุกตลาด</option><option value="thai">หุ้นไทย</option><option value="crypto">Crypto</option></select>
+ <select id="signal"><option value="all">ทุกสัญญาณ</option><option>BUY WATCH</option><option>SELL / EXIT WATCH</option><option>WAIT</option><option>INSUFFICIENT_DATA</option></select>
+ <button id="refresh">รีเฟรช</button>
+</div>
+
+<div class="tablewrap"><table><thead><tr><th>ตลาด</th><th>Symbol</th><th>สัญญาณ</th><th>ราคา</th><th>RSI</th><th>Stop*</th><th>T1*</th><th>T2*</th><th>เหตุผล</th></tr></thead><tbody id="rows"><tr><td>กำลังโหลด…</td></tr></tbody></table></div>
+
+<div class="two">
+ <div class="card">
+  <h3 style="margin-top:0">🔔 ตั้งการแจ้งเตือน</h3>
+  <div class="alertform">
+   <select id="aSym"></select>
+   <select id="aCond"><option value="above">ราคา ≥</option><option value="below">ราคา ≤</option></select>
+   <input id="aPrice" type="number" step="any" inputmode="decimal" placeholder="ราคา">
+   <button class="primary" id="aAdd">เพิ่ม</button>
+  </div>
+  <div class="opts">
+   <label><input type="checkbox" id="oSig" checked> แจ้งเมื่อสัญญาณเปลี่ยนเป็น BUY/SELL</label>
+   <label><input type="checkbox" id="oSound" checked> เสียง</label>
+   <label><input type="checkbox" id="oVib" checked> สั่น</label>
+  </div>
+  <button id="notifBtn">เปิดแจ้งเตือนของเครื่อง</button> <span class="muted" id="notifState" style="font-size:13px"></span>
+  <div id="alertList" style="margin-top:8px"></div>
+  <div class="muted" style="font-size:12px;margin-top:6px">แจ้งเตือนทำงานเมื่อเปิดหน้าเว็บไว้ (หรือแอปที่ Add to Home Screen) หากต้องการแจ้งเตือนตอนปิดหน้าเว็บ ให้ใช้ Discord webhook เดิมของระบบ</div>
+ </div>
+ <div class="card">
+  <h3 style="margin-top:0">ประวัติการแจ้งเตือน</h3>
+  <div id="log" class="muted">ยังไม่มี</div>
+  <h3>Scan errors ล่าสุด</h3><div id="errorList" class="muted">ไม่มี</div>
+ </div>
+</div>
+<div class="notice">* ระดับ Stop/Target คำนวณจาก ATR เป็นข้อมูลอ้างอิง ไม่ใช่คำสั่งซื้อขาย ข้อมูลจากผู้ให้บริการอาจล่าช้า/ผิดพลาด ไม่มีกลยุทธ์ใดรับประกันกำไร พิจารณาค่าธรรมเนียม สภาพคล่อง และภาษีก่อนใช้จริง</div>
 </main>
 <script>
-let payload={results:[]};
-const fmt=v=>v===undefined||v===null||Number.isNaN(Number(v))?'—':Number(v).toLocaleString(undefined,{maximumFractionDigits:6});
-function render(){
- const s=payload.summary||{};document.querySelector('#total').textContent=s.total??payload.results.length;
- document.querySelector('#buy').textContent=s.buy_watch??0;document.querySelector('#sell').textContent=s.sell_watch??0;document.querySelector('#errors').textContent=s.errors??(payload.errors||[]).length;
- document.querySelector('#last').textContent=payload.scanned_at?'Last scan: '+new Date(payload.scanned_at).toLocaleString():'Waiting for first scan';
- document.querySelector('#disclaimer').textContent=payload.disclaimer||'';
- const q=document.querySelector('#search').value.toLowerCase(),m=document.querySelector('#market').value,sg=document.querySelector('#signal').value;
- const rows=(payload.results||[]).filter(r=>(m==='all'||r.market===m)&&(sg==='all'||r.signal===sg)&&((r.symbol||'').toLowerCase().includes(q)||(r.name||'').toLowerCase().includes(q)));
- document.querySelector('#rows').innerHTML=rows.map(r=>{let c=r.signal==='BUY WATCH'?'buy':r.signal==='SELL / EXIT WATCH'?'sell':'wait';return `<tr><td>${esc(r.market||'')}</td><td><b>${esc(r.symbol||'')}</b><br><span class="muted">${esc(r.name||'')}</span></td><td><span class="pill ${c}">${esc(r.signal||'')}</span></td><td>${fmt(r.price)}</td><td>${fmt(r.rsi)}</td><td>${fmt(r.stop_loss)}</td><td>${fmt(r.target1)}</td><td>${fmt(r.target2)}</td><td>${esc(r.reason||'')}</td></tr>`}).join('')||'<tr><td colspan="9">No matching results.</td></tr>';
- const errors=payload.errors||[];document.querySelector('#errorList').textContent=errors.length?errors.map(e=>`${e.symbol}: ${e.error}`).join(' | '):'None reported';
+const $=s=>document.querySelector(s);
+const esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=v=>v==null||isNaN(Number(v))?'—':Number(v).toLocaleString(undefined,{maximumFractionDigits:Number(v)<1?6:2});
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+
+let payload={results:[]}, live={}, prevLive={}, alerts=store.get('alerts',[]), logs=store.get('log',[]);
+let opts=store.get('opts',{sig:true,sound:true,vib:true}), swReg=null;
+
+/* ---------- Alerts ---------- */
+function beep(){try{const c=new (window.AudioContext||window.webkitAudioContext)(),o=c.createOscillator(),g=c.createGain();o.connect(g);g.connect(c.destination);o.frequency.value=880;g.gain.setValueAtTime(.2,c.currentTime);g.gain.exponentialRampToValueAtTime(.001,c.currentTime+.6);o.start();o.stop(c.currentTime+.6)}catch(e){}}
+function fire(title,body,kind){
+ const t=document.createElement('div');t.className='toast '+(kind||'');t.innerHTML=`<b>${esc(title)}</b><div>${esc(body)}</div>`;
+ t.onclick=()=>t.remove();$('#toasts').appendChild(t);setTimeout(()=>t.remove(),12000);
+ if(opts.sound)beep();if(opts.vib&&navigator.vibrate)navigator.vibrate([200,100,200]);
+ if('Notification' in window&&Notification.permission==='granted'){
+  try{swReg?swReg.showNotification(title,{body,icon:'icon.svg',tag:title+body}):new Notification(title,{body})}catch(e){}
+ }
+ logs.unshift({t:Date.now(),title,body});logs=logs.slice(0,30);store.set('log',logs);renderLog();
 }
-function esc(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-async function load(){try{const r=await fetch('./data/latest.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);payload=await r.json();render()}catch(e){document.querySelector('#last').textContent='Could not load scan data: '+e.message}}
-['search','market','signal'].forEach(id=>document.getElementById(id).addEventListener(id==='search'?'input':'change',render));
-document.querySelector('#refresh').addEventListener('click',load);load();setInterval(load,60000);
+function renderLog(){$('#log').innerHTML=logs.length?logs.map(l=>`<div class="item"><span><b>${esc(l.title)}</b><br><span class="muted">${esc(l.body)}</span></span><span class="muted">${new Date(l.t).toLocaleTimeString()}</span></div>`).join(''):'ยังไม่มี'}
+function renderAlerts(){
+ $('#alertList').innerHTML=alerts.map((a,i)=>`<div class="item"><span>${esc(a.sym)} ${a.cond==='above'?'≥':'≤'} ${fmt(a.price)} ${a.done?'<span class="muted">(แจ้งแล้ว)</span>':''}</span><button data-i="${i}">ลบ</button></div>`).join('')||'<div class="muted">ยังไม่มีการแจ้งเตือนราคา</div>';
+ $('#alertList').querySelectorAll('button').forEach(b=>b.onclick=()=>{alerts.splice(+b.dataset.i,1);store.set('alerts',alerts);renderAlerts()});
+}
+function priceOf(sym){if(live[sym])return live[sym].price;const r=(payload.results||[]).find(x=>x.symbol===sym);return r?r.price:null}
+function checkAlerts(){
+ let ch=false;
+ alerts.forEach(a=>{if(a.done)return;const p=priceOf(a.sym);if(p==null)return;
+  if((a.cond==='above'&&p>=a.price)||(a.cond==='below'&&p<=a.price)){a.done=true;ch=true;fire('ราคาถึงเป้า '+a.sym,`ราคา ${fmt(p)} ${a.cond==='above'?'≥':'≤'} ${fmt(a.price)}`,a.cond==='above'?'buy':'sell')}});
+ if(ch){store.set('alerts',alerts);renderAlerts()}
+}
+function checkSignals(){
+ const seen=store.get('sigs',null),cur={};(payload.results||[]).forEach(r=>cur[r.symbol]=r.signal);
+ if(seen&&opts.sig)(payload.results||[]).forEach(r=>{if(seen[r.symbol]!==r.signal&&(r.signal==='BUY WATCH'||r.signal==='SELL / EXIT WATCH'))
+  fire((r.signal==='BUY WATCH'?'🟢 ':'🔴 ')+r.symbol+' · '+r.signal,`ราคา ${fmt(r.price)} · RSI ${fmt(r.rsi)} · ${r.reason||''}`,r.signal==='BUY WATCH'?'buy':'sell')});
+ store.set('sigs',cur);
+}
+
+/* ---------- Render ---------- */
+function render(){
+ const R=payload.results||[],s=payload.summary||{};
+ $('#total').textContent=s.total??R.length;$('#buy').textContent=s.buy_watch??R.filter(r=>r.signal==='BUY WATCH').length;
+ $('#sell').textContent=s.sell_watch??R.filter(r=>r.signal==='SELL / EXIT WATCH').length;$('#errors').textContent=s.errors??(payload.errors||[]).length;
+ $('#last').textContent=payload.scanned_at?'สแกนล่าสุด: '+new Date(payload.scanned_at).toLocaleString('th-TH'):'รอสแกนครั้งแรก';
+ const q=$('#search').value.toLowerCase(),m=$('#market').value,sg=$('#signal').value;
+ const rows=R.filter(r=>(m==='all'||r.market===m)&&(sg==='all'||r.signal===sg)&&((r.symbol||'').toLowerCase().includes(q)||(r.name||'').toLowerCase().includes(q)));
+ $('#rows').innerHTML=rows.map(r=>{const c=r.signal==='BUY WATCH'?'buy':r.signal==='SELL / EXIT WATCH'?'sell':'wait',L=live[r.symbol];
+  const pr=L?`<span class="${L.dir?'flash-'+L.dir:''}"><b>${fmt(L.price)}</b></span><span class="live">LIVE</span><br><span class="${L.chg>=0?'up':'down'}" style="font-size:12px">${L.chg>=0?'+':''}${L.chg.toFixed(2)}% 24h</span>`:fmt(r.price);
+  return `<tr><td data-l="ตลาด">${esc(r.market==='thai'?'หุ้นไทย':'Crypto')}</td><td data-l="Symbol"><b>${esc(r.symbol)}</b><br><span class="muted">${esc(r.name||'')}</span></td><td data-l="สัญญาณ"><span class="pill ${c}">${esc(r.signal)}</span></td><td data-l="ราคา">${pr}</td><td data-l="RSI">${fmt(r.rsi)}</td><td data-l="Stop*">${fmt(r.stop_loss)}</td><td data-l="T1*">${fmt(r.target1)}</td><td data-l="T2*">${fmt(r.target2)}</td><td class="full muted" data-l="เหตุผล">${esc(r.reason||'')}</td></tr>`}).join('')||'<tr><td>ไม่พบข้อมูล</td></tr>';
+ const e=payload.errors||[];$('#errorList').textContent=e.length?e.map(x=>`${x.symbol}: ${x.error}`).join(' | '):'ไม่มี';
+ Object.values(live).forEach(l=>l.dir=null);
+}
+let pending=false;function schedule(){if(pending)return;pending=true;setTimeout(()=>{pending=false;render()},1000)}
+function fillSymbols(){const cur=$('#aSym').value;$('#aSym').innerHTML=(payload.results||[]).map(r=>`<option>${esc(r.symbol)}</option>`).join('');if(cur)$('#aSym').value=cur}
+
+/* ---------- Data ---------- */
+async function load(){
+ try{const r=await fetch('./data/latest.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);
+  payload=await r.json();fillSymbols();render();checkSignals();checkAlerts();startLive()}
+ catch(e){$('#last').textContent='โหลดข้อมูลไม่ได้: '+e.message}
+}
+
+/* ---------- Live crypto (Binance public WebSocket, REST fallback) ---------- */
+let ws=null,wsKey='',retry=0,poll=null;
+const toB=s=>s.replace('/','').toLowerCase();
+function setState(on,txt){$('#wsdot').className='dot'+(on?' on':'');$('#wsstate').textContent=txt}
+function onTick(sym,price,chg){const o=live[sym];live[sym]={price,chg,dir:o?(price>o.price?'up':price<o.price?'down':null):null};schedule();checkAlerts()}
+function startLive(){
+ const cs=(payload.results||[]).filter(r=>r.market==='crypto').map(r=>r.symbol);if(!cs.length)return;
+ const key=cs.join();if(key===wsKey&&ws&&ws.readyState<2)return;wsKey=key;
+ const map={};cs.forEach(s=>map[toB(s).toUpperCase()]=s);
+ try{ws&&ws.close()}catch(e){}
+ ws=new WebSocket('wss://stream.binance.com:9443/stream?streams='+cs.map(s=>toB(s)+'@ticker').join('/'));
+ ws.onopen=()=>{retry=0;setState(true,'LIVE · Crypto');if(poll){clearInterval(poll);poll=null}};
+ ws.onmessage=ev=>{const d=JSON.parse(ev.data).data;if(d&&map[d.s])onTick(map[d.s],+d.c,+d.P)};
+ ws.onclose=()=>{setState(false,'ขาดการเชื่อมต่อ · กำลังต่อใหม่');const w=Math.min(30000,1000*2**retry++);setTimeout(()=>{wsKey='';startLive()},w);
+  if(retry>2&&!poll)poll=setInterval(()=>pollREST(map),5000)};
+ ws.onerror=()=>{try{ws.close()}catch(e){}};
+}
+async function pollREST(map){
+ try{const r=await fetch('https://data-api.binance.vision/api/v3/ticker/24hr?symbols='+encodeURIComponent(JSON.stringify(Object.keys(map))));
+  (await r.json()).forEach(d=>onTick(map[d.symbol],+d.lastPrice,+d.priceChangePercent));setState(true,'LIVE (polling)')}catch(e){}
+}
+document.addEventListener('visibilitychange',()=>{if(!document.hidden){load();if(!ws||ws.readyState>1){wsKey='';startLive()}}});
+
+/* ---------- UI wiring ---------- */
+['search','market','signal'].forEach(id=>$('#'+id).addEventListener(id==='search'?'input':'change',render));
+$('#refresh').onclick=load;
+$('#aAdd').onclick=()=>{const p=parseFloat($('#aPrice').value);if(!$('#aSym').value||isNaN(p))return;alerts.push({sym:$('#aSym').value,cond:$('#aCond').value,price:p,done:false});store.set('alerts',alerts);$('#aPrice').value='';renderAlerts();checkAlerts()};
+[['oSig','sig'],['oSound','sound'],['oVib','vib']].forEach(([id,k])=>{$('#'+id).checked=opts[k];$('#'+id).onchange=e=>{opts[k]=e.target.checked;store.set('opts',opts)}});
+function notifUI(){$('#notifState').textContent=!('Notification' in window)?'อุปกรณ์นี้ไม่รองรับ':Notification.permission==='granted'?'เปิดอยู่ ✓':Notification.permission==='denied'?'ถูกบล็อก (แก้ในตั้งค่าเบราว์เซอร์)':''}
+$('#notifBtn').onclick=async()=>{if(!('Notification' in window))return notifUI();await Notification.requestPermission();notifUI();if(Notification.permission==='granted')fire('เปิดแจ้งเตือนแล้ว','ทดสอบการแจ้งเตือน')};
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').then(r=>swReg=r).catch(()=>{});
+notifUI();renderAlerts();renderLog();load();setInterval(load,60000);
 </script></body></html>
