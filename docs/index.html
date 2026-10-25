@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thai Stock & Crypto Scanner Pro</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1220;--panel:#121c2e;--line:#26364f;--muted:#9fb0c8;--green:#2ecc71;--red:#ff6b6b;--amber:#f4c15d}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#09111f,#111d32);color:#e9f0fa;font:15px/1.5 system-ui,Segoe UI,sans-serif}
+header{padding:28px max(18px,calc((100vw - 1250px)/2));border-bottom:1px solid var(--line);background:#0c1525}
+h1{margin:0;font-size:clamp(22px,4vw,34px)}.sub{color:var(--muted);margin-top:6px}
+main{max-width:1250px;margin:auto;padding:22px 18px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.card{background:rgba(18,28,46,.94);border:1px solid var(--line);border-radius:14px;padding:16px}.metric{font-size:27px;font-weight:750}.muted{color:var(--muted)}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+input,select,button{background:#0c1525;color:#e9f0fa;border:1px solid var(--line);border-radius:9px;padding:10px 12px}button{cursor:pointer}button:hover{border-color:#6885b3}
+.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:12px}table{border-collapse:collapse;width:100%;min-width:900px;background:#111b2d}th,td{padding:12px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{color:#b7c8df;background:#17243a;position:sticky;top:0}.pill{padding:4px 8px;border-radius:99px;font-weight:700;font-size:12px}.buy{color:#8ff0b1;background:#123a2a}.sell{color:#ff9d9d;background:#492226}.wait{color:#f4d48a;background:#42351a}.error{color:#ffb3b3}.notice{margin-top:18px;color:var(--muted);font-size:13px}.status{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--amber);margin-right:7px}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:450px){.grid{grid-template-columns:1fr}}
+</style></head>
+<body>
+<header><h1>Thai Stock & Crypto Scanner Pro</h1><div class="sub">Signal-only market monitor · Thai equities + crypto · 15-minute scan schedule</div></header>
+<main>
+<div class="grid">
+ <div class="card"><div class="muted">Assets scanned</div><div class="metric" id="total">—</div></div>
+ <div class="card"><div class="muted">Buy watch</div><div class="metric" id="buy">—</div></div>
+ <div class="card"><div class="muted">Sell / exit watch</div><div class="metric" id="sell">—</div></div>
+ <div class="card"><div class="muted">Data errors</div><div class="metric" id="errors">—</div></div>
+</div>
+<div class="toolbar">
+ <input id="search" placeholder="Search symbol or name…" aria-label="Search">
+ <select id="market"><option value="all">All markets</option><option value="thai">Thai stocks</option><option value="crypto">Crypto</option></select>
+ <select id="signal"><option value="all">All signals</option><option>BUY WATCH</option><option>SELL / EXIT WATCH</option><option>WAIT</option><option>INSUFFICIENT_DATA</option></select>
+ <button id="refresh">Refresh data</button>
+</div>
+<div class="card" style="margin-bottom:14px"><div><span class="status"></span><b id="last">Waiting for first scan</b></div><div class="muted" id="disclaimer" style="margin-top:7px"></div></div>
+<div class="tablewrap"><table><thead><tr><th>Market</th><th>Symbol</th><th>Signal</th><th>Price</th><th>RSI</th><th>Stop loss*</th><th>Target 1*</th><th>Target 2*</th><th>Reason</th></tr></thead><tbody id="rows"><tr><td colspan="9">Loading…</td></tr></tbody></table></div>
+<div class="notice">* Indicative ATR-based levels, not order instructions. Data providers can delay, omit, or revise candles. This is not financial advice and no strategy guarantees profit. Backtest before use; consider fees, slippage, liquidity, and tax. The dashboard is refreshed when GitHub Actions successfully updates the snapshot.</div>
+<h3>Latest scan errors</h3><div class="card error" id="errorList">None reported</div>
+</main>
+<script>
+let payload={results:[]};
+const fmt=v=>v===undefined||v===null||Number.isNaN(Number(v))?'—':Number(v).toLocaleString(undefined,{maximumFractionDigits:6});
+function render(){
+ const s=payload.summary||{};document.querySelector('#total').textContent=s.total??payload.results.length;
+ document.querySelector('#buy').textContent=s.buy_watch??0;document.querySelector('#sell').textContent=s.sell_watch??0;document.querySelector('#errors').textContent=s.errors??(payload.errors||[]).length;
+ document.querySelector('#last').textContent=payload.scanned_at?'Last scan: '+new Date(payload.scanned_at).toLocaleString():'Waiting for first scan';
+ document.querySelector('#disclaimer').textContent=payload.disclaimer||'';
+ const q=document.querySelector('#search').value.toLowerCase(),m=document.querySelector('#market').value,sg=document.querySelector('#signal').value;
+ const rows=(payload.results||[]).filter(r=>(m==='all'||r.market===m)&&(sg==='all'||r.signal===sg)&&((r.symbol||'').toLowerCase().includes(q)||(r.name||'').toLowerCase().includes(q)));
+ document.querySelector('#rows').innerHTML=rows.map(r=>{let c=r.signal==='BUY WATCH'?'buy':r.signal==='SELL / EXIT WATCH'?'sell':'wait';return `<tr><td>${esc(r.market||'')}</td><td><b>${esc(r.symbol||'')}</b><br><span class="muted">${esc(r.name||'')}</span></td><td><span class="pill ${c}">${esc(r.signal||'')}</span></td><td>${fmt(r.price)}</td><td>${fmt(r.rsi)}</td><td>${fmt(r.stop_loss)}</td><td>${fmt(r.target1)}</td><td>${fmt(r.target2)}</td><td>${esc(r.reason||'')}</td></tr>`}).join('')||'<tr><td colspan="9">No matching results.</td></tr>';
+ const errors=payload.errors||[];document.querySelector('#errorList').textContent=errors.length?errors.map(e=>`${e.symbol}: ${e.error}`).join(' | '):'None reported';
+}
+function esc(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+async function load(){try{const r=await fetch('./data/latest.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);payload=await r.json();render()}catch(e){document.querySelector('#last').textContent='Could not load scan data: '+e.message}}
+['search','market','signal'].forEach(id=>document.getElementById(id).addEventListener(id==='search'?'input':'change',render));
+document.querySelector('#refresh').addEventListener('click',load);load();setInterval(load,60000);
+</script></body></html>

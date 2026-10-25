@@ -1,0 +1,15 @@
+{
+  "app": "Thai Stock & Crypto Scanner Pro",
+  "scanned_at": null,
+  "mode": "signal-only",
+  "results": [],
+  "errors": [],
+  "summary": {
+    "total": 0,
+    "buy_watch": 0,
+    "sell_watch": 0,
+    "wait": 0,
+    "errors": 0
+  },
+  "disclaimer": "No scan has run yet. Signals do not guarantee profit."
+}

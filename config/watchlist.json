@@ -1,0 +1,64 @@
+{
+  "settings": {
+    "interval": "15m",
+    "history_period": "60d",
+    "min_history": 60,
+    "scan_timeframe_label": "15-minute",
+    "atr_stop_multiple": 1.5,
+    "target1_r_multiple": 1.5,
+    "target2_r_multiple": 2.5,
+    "max_alerts_per_symbol_per_signal": true
+  },
+  "thai_stocks": [
+    {
+      "symbol": "PTT.BK",
+      "name": "PTT"
+    },
+    {
+      "symbol": "AOT.BK",
+      "name": "AOT"
+    },
+    {
+      "symbol": "ADVANC.BK",
+      "name": "ADVANC"
+    },
+    {
+      "symbol": "KBANK.BK",
+      "name": "KBANK"
+    },
+    {
+      "symbol": "CPALL.BK",
+      "name": "CPALL"
+    },
+    {
+      "symbol": "GULF.BK",
+      "name": "GULF"
+    },
+    {
+      "symbol": "DELTA.BK",
+      "name": "DELTA"
+    }
+  ],
+  "crypto": [
+    {
+      "symbol": "BTC/USDT",
+      "name": "Bitcoin"
+    },
+    {
+      "symbol": "ETH/USDT",
+      "name": "Ethereum"
+    },
+    {
+      "symbol": "BNB/USDT",
+      "name": "BNB"
+    },
+    {
+      "symbol": "SOL/USDT",
+      "name": "Solana"
+    },
+    {
+      "symbol": "XRP/USDT",
+      "name": "XRP"
+    }
+  ]
+}
