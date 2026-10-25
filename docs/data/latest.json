@@ -1,15 +1,340 @@
 {
   "app": "Thai Stock & Crypto Scanner Pro",
-  "scanned_at": null,
+  "scanned_at": "2026-10-25T05:40:57.646246+00:00",
   "mode": "signal-only",
-  "results": [],
-  "errors": [],
+  "results": [
+    {
+      "symbol": "PTT.BK",
+      "name": "PTT",
+      "market": "thai",
+      "signal": "WAIT",
+      "reason": "Entry/exit conditions not fully met",
+      "time": "2026-10-22T16:15:00+07:00",
+      "price": 41.5,
+      "rsi": 61.36,
+      "ema20": 41.32728448,
+      "ema50": 41.11263172,
+      "macd_hist": -0.00199708,
+      "atr": 0.30658601,
+      "stop_loss": 41.04012099,
+      "target1": 42.18981852,
+      "target2": 42.64969753,
+      "risk_reward_t1": 1.5,
+      "volume_confirmed": false,
+      "breakout": false,
+      "timeframes": {
+        "daily": {
+          "trend": "BULLISH",
+          "close": 41.5,
+          "ema20": 41.09273716,
+          "ema50": 40.730246,
+          "candles": 1211
+        },
+        "weekly": {
+          "trend": "BULLISH",
+          "close": 41.5,
+          "ema20": 39.75191051,
+          "ema50": 37.14400126,
+          "candles": 261
+        },
+        "monthly": {
+          "trend": "BULLISH",
+          "close": 41.5,
+          "ema20": 35.88252014,
+          "ema50": 34.86216003,
+          "candles": 61
+        }
+      }
+    },
+    {
+      "symbol": "AOT.BK",
+      "name": "AOT",
+      "market": "thai",
+      "signal": "WAIT",
+      "reason": "Entry/exit conditions not fully met",
+      "time": "2026-10-22T16:15:00+07:00",
+      "price": 59.75,
+      "rsi": 58.7,
+      "ema20": 59.67456912,
+      "ema50": 59.01588075,
+      "macd_hist": -0.1082188,
+      "atr": 0.36056454,
+      "stop_loss": 59.20915319,
+      "target1": 60.56127021,
+      "target2": 61.10211701,
+      "risk_reward_t1": 1.5,
+      "volume_confirmed": false,
+      "breakout": false,
+      "timeframes": {
+        "daily": {
+          "trend": "NEUTRAL",
+          "close": 59.75,
+          "ema20": 59.34566804,
+          "ema50": 60.68506735,
+          "candles": 1211
+        },
+        "weekly": {
+          "trend": "NEUTRAL",
+          "close": 59.75,
+          "ema20": 60.25738952,
+          "ema50": 56.38327959,
+          "candles": 261
+        },
+        "monthly": {
+          "trend": "NEUTRAL",
+          "close": 59.75,
+          "ema20": 54.68045838,
+          "ema50": 56.62412785,
+          "candles": 61
+        }
+      }
+    },
+    {
+      "symbol": "ADVANC.BK",
+      "name": "ADVANC",
+      "market": "thai",
+      "signal": "WAIT",
+      "reason": "Entry/exit conditions not fully met",
+      "time": "2026-10-22T16:15:00+07:00",
+      "price": 335.0,
+      "rsi": 50.9,
+      "ema20": 335.04864843,
+      "ema50": 334.1860281,
+      "macd_hist": -0.15497124,
+      "atr": 1.24933234,
+      "stop_loss": 333.12600149,
+      "target1": 337.81099776,
+      "target2": 339.68499627,
+      "risk_reward_t1": 1.5,
+      "volume_confirmed": true,
+      "breakout": false,
+      "timeframes": {
+        "daily": {
+          "trend": "BEARISH",
+          "close": 336.0,
+          "ema20": 339.19812111,
+          "ema50": 347.5159801,
+          "candles": 1211
+        },
+        "weekly": {
+          "trend": "NEUTRAL",
+          "close": 336.0,
+          "ema20": 350.89589256,
+          "ema50": 344.11137832,
+          "candles": 261
+        },
+        "monthly": {
+          "trend": "BULLISH",
+          "close": 336.0,
+          "ema20": 326.60212398,
+          "ema50": 282.42009411,
+          "candles": 61
+        }
+      }
+    },
+    {
+      "symbol": "KBANK.BK",
+      "name": "KBANK",
+      "market": "thai",
+      "signal": "WAIT",
+      "reason": "Entry/exit conditions not fully met",
+      "time": "2026-10-22T16:15:00+07:00",
+      "price": 243.0,
+      "rsi": 61.79,
+      "ema20": 241.71121941,
+      "ema50": 239.57865004,
+      "macd_hist": -0.14922556,
+      "atr": 1.2769152,
+      "stop_loss": 241.0846272,
+      "target1": 245.8730592,
+      "target2": 247.78843201,
+      "risk_reward_t1": 1.5,
+      "volume_confirmed": true,
+      "breakout": false,
+      "timeframes": {
+        "daily": {
+          "trend": "NEUTRAL",
+          "close": 242.0,
+          "ema20": 238.35803754,
+          "ema50": 239.9285904,
+          "candles": 1211
+        },
+        "weekly": {
+          "trend": "BULLISH",
+          "close": 242.0,
+          "ema20": 234.0751775,
+          "ema50": 214.10110413,
+          "candles": 261
+        },
+        "monthly": {
+          "trend": "BULLISH",
+          "close": 242.0,
+          "ema20": 199.66176952,
+          "ema50": 172.61648666,
+          "candles": 61
+        }
+      }
+    },
+    {
+      "symbol": "CPALL.BK",
+      "name": "CPALL",
+      "market": "thai",
+      "signal": "WAIT",
+      "reason": "Entry/exit conditions not fully met",
+      "time": "2026-10-22T16:15:00+07:00",
+      "price": 44.0,
+      "rsi": 51.96,
+      "ema20": 43.94609151,
+      "ema50": 43.85217237,
+      "macd_hist": -0.00556736,
+      "atr": 0.28958689,
+      "stop_loss": 43.56561967,
+      "target1": 44.6515705,
+      "target2": 45.08595083,
+      "risk_reward_t1": 1.5,
+      "volume_confirmed": true,
+      "breakout": false,
+      "timeframes": {
+        "daily": {
+          "trend": "NEUTRAL",
+          "close": 44.0,
+          "ema20": 43.64131026,
+          "ema50": 44.61149356,
+          "candles": 1211
+        },
+        "weekly": {
+          "trend": "BEARISH",
+          "close": 44.0,
+          "ema20": 45.27193561,
+          "ema50": 46.20228167,
+          "candles": 261
+        },
+        "monthly": {
+          "trend": "BEARISH",
+          "close": 44.0,
+          "ema20": 47.39813728,
+          "ema50": 52.37699898,
+          "candles": 61
+        }
+      }
+    },
+    {
+      "symbol": "GULF.BK",
+      "name": "GULF",
+      "market": "thai",
+      "signal": "WAIT",
+      "reason": "Entry/exit conditions not fully met",
+      "time": "2026-10-22T16:15:00+07:00",
+      "price": 61.75,
+      "rsi": 51.01,
+      "ema20": 61.73910818,
+      "ema50": 61.67356788,
+      "macd_hist": -0.0168502,
+      "atr": 0.34412071,
+      "stop_loss": 61.23381894,
+      "target1": 62.52427159,
+      "target2": 63.04045264,
+      "risk_reward_t1": 1.5,
+      "volume_confirmed": true,
+      "breakout": false,
+      "timeframes": {
+        "daily": {
+          "trend": "NEUTRAL",
+          "close": 61.75,
+          "ema20": 61.09323007,
+          "ema50": 61.67825571,
+          "candles": 373
+        },
+        "weekly": {
+          "trend": "BULLISH",
+          "close": 61.75,
+          "ema20": 61.6855848,
+          "ema50": 57.92356065,
+          "candles": 82
+        },
+        "monthly": {
+          "trend": "INSUFFICIENT_HISTORY",
+          "candles": 19
+        }
+      }
+    },
+    {
+      "symbol": "DELTA.BK",
+      "name": "DELTA",
+      "market": "thai",
+      "signal": "WAIT",
+      "reason": "Entry/exit conditions not fully met",
+      "time": "2026-10-22T16:15:00+07:00",
+      "price": 235.0,
+      "rsi": 44.12,
+      "ema20": 235.34057117,
+      "ema50": 238.14768746,
+      "macd_hist": 0.16357751,
+      "atr": 1.58317672,
+      "stop_loss": 232.62523493,
+      "target1": 238.56214761,
+      "target2": 240.93691268,
+      "risk_reward_t1": 1.5,
+      "volume_confirmed": false,
+      "breakout": false,
+      "timeframes": {
+        "daily": {
+          "trend": "BEARISH",
+          "close": 234.0,
+          "ema20": 254.19982382,
+          "ema50": 261.94170879,
+          "candles": 1211
+        },
+        "weekly": {
+          "trend": "NEUTRAL",
+          "close": 234.0,
+          "ema20": 267.76334081,
+          "ema50": 252.06786498,
+          "candles": 261
+        },
+        "monthly": {
+          "trend": "BULLISH",
+          "close": 234.0,
+          "ema20": 222.38506535,
+          "ema50": 159.15851957,
+          "candles": 61
+        }
+      }
+    }
+  ],
+  "errors": [
+    {
+      "symbol": "BTC/USDT",
+      "market": "crypto",
+      "error": "binance GET https://api.binance.com/api/v3/exchangeInfo 451  {\n  \"code\": 0,\n  \"msg\": \"Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.\"\n}"
+    },
+    {
+      "symbol": "ETH/USDT",
+      "market": "crypto",
+      "error": "binance GET https://api.binance.com/api/v3/exchangeInfo 451  {\n  \"code\": 0,\n  \"msg\": \"Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.\"\n}"
+    },
+    {
+      "symbol": "BNB/USDT",
+      "market": "crypto",
+      "error": "binance GET https://api.binance.com/api/v3/exchangeInfo 451  {\n  \"code\": 0,\n  \"msg\": \"Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.\"\n}"
+    },
+    {
+      "symbol": "SOL/USDT",
+      "market": "crypto",
+      "error": "binance GET https://api.binance.com/api/v3/exchangeInfo 451  {\n  \"code\": 0,\n  \"msg\": \"Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.\"\n}"
+    },
+    {
+      "symbol": "XRP/USDT",
+      "market": "crypto",
+      "error": "binance GET https://api.binance.com/api/v3/exchangeInfo 451  {\n  \"code\": 0,\n  \"msg\": \"Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.\"\n}"
+    }
+  ],
   "summary": {
-    "total": 0,
+    "total": 7,
     "buy_watch": 0,
     "sell_watch": 0,
-    "wait": 0,
-    "errors": 0
+    "wait": 7,
+    "errors": 5
   },
-  "disclaimer": "No scan has run yet. Signals do not guarantee profit."
+  "disclaimer": "Signals are informational, may be delayed or wrong, and do not guarantee profit."
 }
