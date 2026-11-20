@@ -1,6 +1,6 @@
 {
   "app": "Thai Stock & Crypto Scanner Pro",
-  "scanned_at": "2026-11-19T22:06:19.010136+00:00",
+  "scanned_at": "2026-11-20T03:24:24.751921+00:00",
   "mode": "signal-only",
   "results": [
     {
@@ -28,14 +28,14 @@
           "close": 37.40000153,
           "ema20": 39.035619,
           "ema50": 39.8849741,
-          "candles": 1211
+          "candles": 1210
         },
         "weekly": {
           "trend": "NEUTRAL",
           "close": 37.40000153,
           "ema20": 39.4184422,
-          "ema50": 37.39521914,
-          "candles": 262
+          "ema50": 37.39519724,
+          "candles": 261
         },
         "monthly": {
           "trend": "BULLISH",
@@ -71,14 +71,14 @@
           "close": 61.5,
           "ema20": 60.83856897,
           "ema50": 60.81905695,
-          "candles": 1211
+          "candles": 1210
         },
         "weekly": {
           "trend": "BULLISH",
           "close": 61.5,
           "ema20": 60.42900211,
-          "ema50": 57.02516726,
-          "candles": 262
+          "ema50": 57.02506507,
+          "candles": 261
         },
         "monthly": {
           "trend": "NEUTRAL",
@@ -114,14 +114,14 @@
           "close": 338.0,
           "ema20": 339.81915343,
           "ema50": 343.25595793,
-          "candles": 1211
+          "candles": 1210
         },
         "weekly": {
           "trend": "NEUTRAL",
           "close": 338.0,
           "ema20": 346.98616119,
-          "ema50": 343.35856202,
-          "candles": 262
+          "ema50": 343.35882481,
+          "candles": 261
         },
         "monthly": {
           "trend": "BULLISH",
@@ -157,14 +157,14 @@
           "close": 250.0,
           "ema20": 246.84777783,
           "ema50": 243.94172438,
-          "candles": 1211
+          "candles": 1210
         },
         "weekly": {
           "trend": "BULLISH",
           "close": 250.0,
           "ema20": 238.68970854,
-          "ema50": 219.09555829,
-          "candles": 262
+          "ema50": 219.0954415,
+          "candles": 261
         },
         "monthly": {
           "trend": "BULLISH",
@@ -200,14 +200,14 @@
           "close": 49.79999924,
           "ema20": 47.03906676,
           "ema50": 45.83987917,
-          "candles": 1211
+          "candles": 1210
         },
         "weekly": {
           "trend": "NEUTRAL",
           "close": 49.79999924,
           "ema20": 45.97793104,
-          "ema50": 46.35693012,
-          "candles": 262
+          "ema50": 46.35678413,
+          "candles": 261
         },
         "monthly": {
           "trend": "NEUTRAL",
@@ -286,14 +286,14 @@
           "close": 180.5,
           "ema20": 199.68416424,
           "ema50": 225.90105134,
-          "candles": 1211
+          "candles": 1210
         },
         "weekly": {
           "trend": "BEARISH",
           "close": 180.5,
           "ema20": 241.10764207,
-          "ema50": 242.49863856,
-          "candles": 262
+          "ema50": 242.4986152,
+          "candles": 261
         },
         "monthly": {
           "trend": "NEUTRAL",
@@ -308,18 +308,18 @@
       "symbol": "BTC/USDT",
       "name": "Bitcoin",
       "market": "crypto",
-      "signal": "SELL / EXIT WATCH",
-      "reason": "EMA20<EMA50, RSI<45 and MACD negative",
-      "time": "2026-11-19T22:00:00+00:00",
-      "price": 61813.02,
-      "rsi": 37.49,
-      "ema20": 62294.58010293,
-      "ema50": 62813.91656452,
-      "macd_hist": -54.9634973,
-      "atr": 338.14907645,
-      "stop_loss": 61305.79638533,
-      "target1": 62573.85542201,
-      "target2": 63081.07903668,
+      "signal": "WAIT",
+      "reason": "Entry/exit conditions not fully met",
+      "time": "2026-11-20T03:15:00+00:00",
+      "price": 62064.39,
+      "rsi": 49.65,
+      "ema20": 62006.94968879,
+      "ema50": 62347.72494583,
+      "macd_hist": 39.92528488,
+      "atr": 394.76615373,
+      "stop_loss": 61472.24076941,
+      "target1": 62952.61384589,
+      "target2": 63544.76307648,
       "risk_reward_t1": 1.5,
       "volume_confirmed": false,
       "breakout": false,
@@ -353,18 +353,18 @@
       "market": "crypto",
       "signal": "SELL / EXIT WATCH",
       "reason": "EMA20<EMA50, RSI<45 and MACD negative",
-      "time": "2026-11-19T22:00:00+00:00",
-      "price": 1746.76,
-      "rsi": 35.31,
-      "ema20": 1762.98484609,
-      "ema50": 1776.64730012,
-      "macd_hist": -1.88389132,
-      "atr": 11.11429195,
-      "stop_loss": 1730.08856207,
-      "target1": 1771.7671569,
-      "target2": 1788.43859483,
+      "time": "2026-11-20T03:15:00+00:00",
+      "price": 1742.59,
+      "rsi": 43.39,
+      "ema20": 1749.12003173,
+      "ema50": 1761.40698256,
+      "macd_hist": -0.3207182,
+      "atr": 13.26970273,
+      "stop_loss": 1722.68544591,
+      "target1": 1772.44683114,
+      "target2": 1792.35138523,
       "risk_reward_t1": 1.5,
-      "volume_confirmed": false,
+      "volume_confirmed": true,
       "breakout": false,
       "timeframes": {
         "daily": {
@@ -396,16 +396,16 @@
       "market": "crypto",
       "signal": "SELL / EXIT WATCH",
       "reason": "EMA20<EMA50, RSI<45 and MACD negative",
-      "time": "2026-11-19T22:00:00+00:00",
-      "price": 578.34,
-      "rsi": 36.97,
-      "ema20": 582.11015134,
-      "ema50": 585.10055699,
-      "macd_hist": -0.54714811,
-      "atr": 2.42415744,
-      "stop_loss": 574.70376384,
-      "target1": 583.79435425,
-      "target2": 587.43059041,
+      "time": "2026-11-20T03:15:00+00:00",
+      "price": 574.75,
+      "rsi": 41.99,
+      "ema20": 576.7750131,
+      "ema50": 580.53327514,
+      "macd_hist": -0.17102442,
+      "atr": 3.33301959,
+      "stop_loss": 569.75047062,
+      "target1": 582.24929407,
+      "target2": 587.24882345,
       "risk_reward_t1": 1.5,
       "volume_confirmed": false,
       "breakout": false,
@@ -437,18 +437,18 @@
       "symbol": "SOL/USDT",
       "name": "Solana",
       "market": "crypto",
-      "signal": "SELL / EXIT WATCH",
-      "reason": "EMA20<EMA50, RSI<45 and MACD negative",
-      "time": "2026-11-19T22:00:00+00:00",
-      "price": 72.55,
-      "rsi": 36.53,
-      "ema20": 73.20841553,
-      "ema50": 73.73608379,
-      "macd_hist": -0.09789898,
-      "atr": 0.45734196,
-      "stop_loss": 71.86398706,
-      "target1": 73.57901941,
-      "target2": 74.26503236,
+      "signal": "WAIT",
+      "reason": "Entry/exit conditions not fully met",
+      "time": "2026-11-20T03:15:00+00:00",
+      "price": 72.72,
+      "rsi": 48.04,
+      "ema20": 72.74188662,
+      "ema50": 73.1895889,
+      "macd_hist": 0.01863151,
+      "atr": 0.589788,
+      "stop_loss": 71.835318,
+      "target1": 74.04702299,
+      "target2": 74.93170499,
       "risk_reward_t1": 1.5,
       "volume_confirmed": false,
       "breakout": false,
@@ -480,18 +480,18 @@
       "symbol": "XRP/USDT",
       "name": "XRP",
       "market": "crypto",
-      "signal": "SELL / EXIT WATCH",
-      "reason": "EMA20<EMA50, RSI<45 and MACD negative",
-      "time": "2026-11-19T22:00:00+00:00",
-      "price": 0.9563,
-      "rsi": 36.08,
-      "ema20": 0.96466189,
-      "ema50": 0.97139279,
-      "macd_hist": -0.00088891,
-      "atr": 0.00588117,
-      "stop_loss": 0.94747825,
-      "target1": 0.96953263,
-      "target2": 0.97835439,
+      "signal": "WAIT",
+      "reason": "Entry/exit conditions not fully met",
+      "time": "2026-11-20T03:15:00+00:00",
+      "price": 0.9583,
+      "rsi": 47.43,
+      "ema20": 0.95899248,
+      "ema50": 0.96443768,
+      "macd_hist": 1.526e-05,
+      "atr": 0.00711209,
+      "stop_loss": 0.94763186,
+      "target1": 0.97430221,
+      "target2": 0.98497034,
       "risk_reward_t1": 1.5,
       "volume_confirmed": false,
       "breakout": false,
@@ -524,8 +524,8 @@
   "summary": {
     "total": 12,
     "buy_watch": 0,
-    "sell_watch": 5,
-    "wait": 7,
+    "sell_watch": 2,
+    "wait": 10,
     "errors": 0
   },
   "disclaimer": "Signals are informational, may be delayed or wrong, and do not guarantee profit."
