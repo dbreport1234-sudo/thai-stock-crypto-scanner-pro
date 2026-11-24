@@ -1,6 +1,6 @@
 {
   "app": "Thai Stock & Crypto Scanner Pro",
-  "scanned_at": "2026-11-24T11:33:15.737584+00:00",
+  "scanned_at": "2026-11-24T21:33:49.788851+00:00",
   "mode": "signal-only",
   "results": [
     {
@@ -25,23 +25,23 @@
       "timeframes": {
         "daily": {
           "trend": "BEARISH",
-          "close": 37.29999924,
-          "ema20": 38.60186939,
-          "ema50": 39.60001756,
-          "candles": 1211
+          "close": 37.40000153,
+          "ema20": 38.73890835,
+          "ema50": 39.69389586,
+          "candles": 1210
         },
         "weekly": {
           "trend": "NEUTRAL",
-          "close": 37.29999924,
-          "ema20": 39.21668573,
-          "ema50": 37.39146399,
+          "close": 37.40000153,
+          "ema20": 39.22620976,
+          "ema50": 37.39538564,
           "candles": 262
         },
         "monthly": {
           "trend": "BULLISH",
-          "close": 37.29999924,
-          "ema20": 36.05502335,
-          "ema50": 34.75876924,
+          "close": 37.40000153,
+          "ema20": 36.06454738,
+          "ema50": 34.7626909,
           "candles": 61
         }
       }
@@ -68,23 +68,23 @@
       "timeframes": {
         "daily": {
           "trend": "BEARISH",
-          "close": 57.5,
-          "ema20": 60.42195709,
-          "ema50": 60.64648763,
-          "candles": 1211
+          "close": 60.0,
+          "ema20": 60.72953152,
+          "ema50": 60.7749157,
+          "candles": 1210
         },
         "weekly": {
           "trend": "NEUTRAL",
-          "close": 57.5,
-          "ema20": 60.06388173,
-          "ema50": 57.00601215,
+          "close": 60.0,
+          "ema20": 60.30197697,
+          "ema50": 57.10405136,
           "candles": 262
         },
         "monthly": {
           "trend": "NEUTRAL",
-          "close": 57.5,
-          "ema20": 54.93838663,
-          "ema50": 56.24459643,
+          "close": 60.0,
+          "ema20": 55.17648187,
+          "ema50": 56.34263565,
           "candles": 61
         }
       }
@@ -111,23 +111,23 @@
       "timeframes": {
         "daily": {
           "trend": "BEARISH",
-          "close": 332.0,
-          "ema20": 338.27530217,
-          "ema50": 342.20313601,
-          "candles": 1211
+          "close": 334.0,
+          "ema20": 338.93586029,
+          "ema50": 342.61959054,
+          "candles": 1210
         },
         "weekly": {
           "trend": "NEUTRAL",
-          "close": 332.0,
-          "ema20": 345.38657214,
-          "ema50": 342.83802506,
+          "close": 334.0,
+          "ema20": 345.57704833,
+          "ema50": 342.91645644,
           "candles": 262
         },
         "monthly": {
           "trend": "BULLISH",
-          "close": 332.0,
-          "ema20": 327.32647815,
-          "ema50": 285.92101216,
+          "close": 334.0,
+          "ema20": 327.51695434,
+          "ema50": 285.99944353,
           "candles": 61
         }
       }
@@ -155,9 +155,9 @@
         "daily": {
           "trend": "BULLISH",
           "close": 251.0,
-          "ema20": 247.76880554,
-          "ema50": 244.66757078,
-          "candles": 1211
+          "ema20": 247.42867981,
+          "ema50": 244.40910428,
+          "candles": 1210
         },
         "weekly": {
           "trend": "BULLISH",
@@ -197,23 +197,23 @@
       "timeframes": {
         "daily": {
           "trend": "BULLISH",
-          "close": 50.5,
-          "ema20": 47.82942015,
-          "ema50": 46.31767007,
-          "candles": 1211
+          "close": 50.25,
+          "ema20": 47.54830648,
+          "ema50": 46.14696272,
+          "candles": 1210
         },
         "weekly": {
           "trend": "NEUTRAL",
-          "close": 50.5,
-          "ema20": 46.37413735,
-          "ema50": 46.50419214,
+          "close": 50.25,
+          "ema20": 46.35032782,
+          "ema50": 46.49438822,
           "candles": 262
         },
         "monthly": {
           "trend": "NEUTRAL",
-          "close": 50.5,
-          "ema20": 47.6597377,
-          "ema50": 51.81474301,
+          "close": 50.25,
+          "ema20": 47.63592818,
+          "ema50": 51.80493909,
           "candles": 61
         }
       }
@@ -241,9 +241,9 @@
         "daily": {
           "trend": "BEARISH",
           "close": 59.5,
-          "ema20": 61.24963372,
-          "ema50": 61.51743203,
-          "candles": 395
+          "ema20": 61.43380569,
+          "ema50": 61.5997762,
+          "candles": 394
         },
         "weekly": {
           "trend": "NEUTRAL",
@@ -283,23 +283,23 @@
       "timeframes": {
         "daily": {
           "trend": "BEARISH",
-          "close": 177.0,
-          "ema20": 193.44160269,
-          "ema50": 220.206269,
-          "candles": 1211
+          "close": 176.0,
+          "ema20": 195.17229771,
+          "ema50": 221.96979018,
+          "candles": 1210
         },
         "weekly": {
           "trend": "BEARISH",
-          "close": 177.0,
-          "ema20": 234.39897775,
-          "ema50": 239.66629734,
+          "close": 176.0,
+          "ema20": 234.30373965,
+          "ema50": 239.62708166,
           "candles": 262
         },
         "monthly": {
           "trend": "NEUTRAL",
-          "close": 177.0,
-          "ema20": 215.39817079,
-          "ema50": 158.95157065,
+          "close": 176.0,
+          "ema20": 215.3029327,
+          "ema50": 158.91235496,
           "candles": 61
         }
       }
@@ -308,18 +308,18 @@
       "symbol": "BTC/USDT",
       "name": "Bitcoin",
       "market": "crypto",
-      "signal": "SELL / EXIT WATCH",
-      "reason": "EMA20<EMA50, RSI<45 and MACD negative",
-      "time": "2026-11-24T11:30:00+00:00",
-      "price": 59846.01,
-      "rsi": 40.55,
-      "ema20": 60056.36449086,
-      "ema50": 60449.03069072,
-      "macd_hist": -8.7951593,
-      "atr": 260.97179369,
-      "stop_loss": 59454.55230947,
-      "target1": 60433.1965358,
-      "target2": 60824.65422634,
+      "signal": "WAIT",
+      "reason": "Entry/exit conditions not fully met",
+      "time": "2026-11-24T21:30:00+00:00",
+      "price": 59922.83,
+      "rsi": 51.6,
+      "ema20": 59843.02874237,
+      "ema50": 60012.57474221,
+      "macd_hist": 18.75878981,
+      "atr": 251.84310518,
+      "stop_loss": 59545.06534223,
+      "target1": 60489.47698665,
+      "target2": 60867.24164442,
       "risk_reward_t1": 1.5,
       "volume_confirmed": false,
       "breakout": false,
@@ -353,16 +353,16 @@
       "market": "crypto",
       "signal": "WAIT",
       "reason": "Entry/exit conditions not fully met",
-      "time": "2026-11-24T11:30:00+00:00",
-      "price": 1687.5,
-      "rsi": 45.44,
-      "ema20": 1689.77507336,
-      "ema50": 1699.63738643,
-      "macd_hist": 0.2181318,
-      "atr": 8.10505681,
-      "stop_loss": 1675.34241478,
-      "target1": 1705.73637783,
-      "target2": 1717.89396305,
+      "time": "2026-11-24T21:30:00+00:00",
+      "price": 1681.51,
+      "rsi": 51.75,
+      "ema20": 1678.7784496,
+      "ema50": 1684.80643628,
+      "macd_hist": 0.81515075,
+      "atr": 7.81452563,
+      "stop_loss": 1669.78821156,
+      "target1": 1699.09268266,
+      "target2": 1710.8144711,
       "risk_reward_t1": 1.5,
       "volume_confirmed": false,
       "breakout": false,
@@ -394,18 +394,18 @@
       "symbol": "BNB/USDT",
       "name": "BNB",
       "market": "crypto",
-      "signal": "SELL / EXIT WATCH",
-      "reason": "EMA20<EMA50, RSI<45 and MACD negative",
-      "time": "2026-11-24T11:30:00+00:00",
-      "price": 547.14,
-      "rsi": 39.56,
-      "ema20": 548.78949862,
-      "ema50": 552.06446344,
-      "macd_hist": -0.05174636,
-      "atr": 2.08794259,
-      "stop_loss": 544.00808611,
-      "target1": 551.83787083,
-      "target2": 554.96978472,
+      "signal": "WAIT",
+      "reason": "Entry/exit conditions not fully met",
+      "time": "2026-11-24T21:30:00+00:00",
+      "price": 550.15,
+      "rsi": 54.51,
+      "ema20": 549.01290456,
+      "ema50": 549.61652175,
+      "macd_hist": 0.12554742,
+      "atr": 2.04050893,
+      "stop_loss": 547.08923661,
+      "target1": 554.74114509,
+      "target2": 557.80190848,
       "risk_reward_t1": 1.5,
       "volume_confirmed": false,
       "breakout": false,
@@ -437,18 +437,18 @@
       "symbol": "SOL/USDT",
       "name": "Solana",
       "market": "crypto",
-      "signal": "SELL / EXIT WATCH",
-      "reason": "EMA20<EMA50, RSI<45 and MACD negative",
-      "time": "2026-11-24T11:30:00+00:00",
-      "price": 70.27,
-      "rsi": 33.29,
-      "ema20": 70.86769182,
-      "ema50": 71.43700328,
-      "macd_hist": -0.06532133,
-      "atr": 0.35696256,
-      "stop_loss": 69.73455617,
-      "target1": 71.07316575,
-      "target2": 71.60860958,
+      "signal": "WAIT",
+      "reason": "Entry/exit conditions not fully met",
+      "time": "2026-11-24T21:30:00+00:00",
+      "price": 69.57,
+      "rsi": 52.46,
+      "ema20": 69.38645312,
+      "ema50": 69.8542904,
+      "macd_hist": 0.07116844,
+      "atr": 0.35426758,
+      "stop_loss": 69.03859863,
+      "target1": 70.36710206,
+      "target2": 70.89850343,
       "risk_reward_t1": 1.5,
       "volume_confirmed": false,
       "breakout": false,
@@ -480,18 +480,18 @@
       "symbol": "XRP/USDT",
       "name": "XRP",
       "market": "crypto",
-      "signal": "SELL / EXIT WATCH",
-      "reason": "EMA20<EMA50, RSI<45 and MACD negative",
-      "time": "2026-11-24T11:30:00+00:00",
-      "price": 0.9275,
-      "rsi": 32.49,
-      "ema20": 0.93575203,
-      "ema50": 0.94179783,
-      "macd_hist": -0.00099269,
-      "atr": 0.00464834,
-      "stop_loss": 0.92052749,
-      "target1": 0.93795877,
-      "target2": 0.94493128,
+      "signal": "WAIT",
+      "reason": "Entry/exit conditions not fully met",
+      "time": "2026-11-24T21:30:00+00:00",
+      "price": 0.9228,
+      "rsi": 53.4,
+      "ema20": 0.92055002,
+      "ema50": 0.9246602,
+      "macd_hist": 0.00065824,
+      "atr": 0.0041682,
+      "stop_loss": 0.9165477,
+      "target1": 0.93217845,
+      "target2": 0.93843075,
       "risk_reward_t1": 1.5,
       "volume_confirmed": false,
       "breakout": false,
@@ -524,8 +524,8 @@
   "summary": {
     "total": 12,
     "buy_watch": 0,
-    "sell_watch": 7,
-    "wait": 5,
+    "sell_watch": 3,
+    "wait": 9,
     "errors": 0
   },
   "disclaimer": "Signals are informational, may be delayed or wrong, and do not guarantee profit."
