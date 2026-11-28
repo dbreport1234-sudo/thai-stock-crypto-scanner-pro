@@ -1,6 +1,6 @@
 {
   "app": "Thai Stock & Crypto Scanner Pro",
-  "scanned_at": "2026-11-27T18:30:27.096184+00:00",
+  "scanned_at": "2026-11-28T01:39:25.706884+00:00",
   "mode": "signal-only",
   "results": [
     {
@@ -25,23 +25,23 @@
       "timeframes": {
         "daily": {
           "trend": "BEARISH",
-          "close": 37.0,
-          "ema20": 38.31128083,
-          "ema50": 39.4000931,
-          "candles": 1210
+          "close": 37.59999847,
+          "ema20": 38.24353966,
+          "ema50": 39.32950115,
+          "candles": 1211
         },
         "weekly": {
           "trend": "NEUTRAL",
-          "close": 37.0,
-          "ema20": 39.18811437,
-          "ema50": 37.37969201,
+          "close": 37.59999847,
+          "ema20": 39.24525709,
+          "ema50": 37.40322136,
           "candles": 261
         },
         "monthly": {
           "trend": "BULLISH",
-          "close": 37.0,
-          "ema20": 36.026452,
-          "ema50": 34.74700457,
+          "close": 37.59999847,
+          "ema20": 36.08359471,
+          "ema50": 34.77053392,
           "candles": 61
         }
       }
@@ -68,23 +68,23 @@
       "timeframes": {
         "daily": {
           "trend": "BEARISH",
-          "close": 54.75,
-          "ema20": 59.52228233,
-          "ema50": 60.24960277,
-          "candles": 1210
+          "close": 55.25,
+          "ema20": 59.1153983,
+          "ema50": 60.05353991,
+          "candles": 1211
         },
         "weekly": {
           "trend": "NEUTRAL",
-          "close": 54.75,
-          "ema20": 59.80197697,
-          "ema50": 56.89805952,
+          "close": 55.25,
+          "ema20": 59.84959602,
+          "ema50": 56.91766736,
           "candles": 261
         },
         "monthly": {
           "trend": "NEUTRAL",
-          "close": 54.75,
-          "ema20": 54.67648187,
-          "ema50": 56.13675329,
+          "close": 55.25,
+          "ema20": 54.72410092,
+          "ema50": 56.15636114,
           "candles": 61
         }
       }
@@ -111,23 +111,23 @@
       "timeframes": {
         "daily": {
           "trend": "BEARISH",
-          "close": 325.0,
-          "ema20": 336.38409089,
-          "ema50": 341.10639352,
-          "candles": 1210
+          "close": 329.0,
+          "ema20": 335.68084414,
+          "ema50": 340.63163299,
+          "candles": 1211
         },
         "weekly": {
           "trend": "NEUTRAL",
-          "close": 325.0,
-          "ema20": 344.71990548,
-          "ema50": 342.56371965,
+          "close": 329.0,
+          "ema20": 345.10085786,
+          "ema50": 342.72058239,
           "candles": 261
         },
         "monthly": {
-          "trend": "NEUTRAL",
-          "close": 325.0,
-          "ema20": 326.65981148,
-          "ema50": 285.64650236,
+          "trend": "BULLISH",
+          "close": 329.0,
+          "ema20": 327.04076386,
+          "ema50": 285.8033651,
           "candles": 61
         }
       }
@@ -154,23 +154,23 @@
       "timeframes": {
         "daily": {
           "trend": "NEUTRAL",
-          "close": 243.0,
-          "ema20": 247.2483873,
-          "ema50": 244.69005669,
-          "candles": 1210
+          "close": 246.0,
+          "ema20": 247.12949327,
+          "ema50": 244.74142701,
+          "candles": 1211
         },
         "weekly": {
           "trend": "BULLISH",
-          "close": 243.0,
-          "ema20": 239.01404469,
-          "ema50": 219.99494916,
+          "close": 246.0,
+          "ema20": 239.29975898,
+          "ema50": 220.11259622,
           "candles": 261
         },
         "monthly": {
           "trend": "BULLISH",
-          "close": 243.0,
-          "ema20": 204.11380794,
-          "ema50": 174.74314327,
+          "close": 246.0,
+          "ema20": 204.39952222,
+          "ema50": 174.86079033,
           "candles": 61
         }
       }
@@ -198,9 +198,9 @@
         "daily": {
           "trend": "BULLISH",
           "close": 50.25,
-          "ema20": 48.3116115,
-          "ema50": 46.6388796,
-          "candles": 1210
+          "ema20": 48.49621993,
+          "ema50": 46.78049216,
+          "candles": 1211
         },
         "weekly": {
           "trend": "NEUTRAL",
@@ -240,23 +240,23 @@
       "timeframes": {
         "daily": {
           "trend": "BEARISH",
-          "close": 56.5,
-          "ema20": 60.45264801,
-          "ema50": 61.15988247,
-          "candles": 397
+          "close": 57.75,
+          "ema20": 60.19525296,
+          "ema50": 61.02616159,
+          "candles": 398
         },
         "weekly": {
           "trend": "NEUTRAL",
-          "close": 56.5,
-          "ema20": 61.14320136,
-          "ema50": 58.37723608,
+          "close": 57.75,
+          "ema20": 61.26224898,
+          "ema50": 58.42625569,
           "candles": 87
         },
         "monthly": {
           "trend": "BULLISH",
-          "close": 56.5,
-          "ema20": 55.29584049,
-          "ema50": 51.86327269,
+          "close": 57.75,
+          "ema20": 55.41488811,
+          "ema50": 51.9122923,
           "candles": 20
         }
       }
@@ -283,23 +283,23 @@
       "timeframes": {
         "daily": {
           "trend": "BEARISH",
-          "close": 169.0,
-          "ema20": 189.13700356,
-          "ema50": 216.32535635,
-          "candles": 1210
+          "close": 179.0,
+          "ema20": 188.17157465,
+          "ema50": 214.86161688,
+          "candles": 1211
         },
         "weekly": {
           "trend": "BEARISH",
-          "close": 169.0,
-          "ema20": 233.63707298,
-          "ema50": 239.35257185,
+          "close": 179.0,
+          "ema20": 234.58945394,
+          "ema50": 239.74472872,
           "candles": 261
         },
         "monthly": {
           "trend": "NEUTRAL",
-          "close": 169.0,
-          "ema20": 214.63626603,
-          "ema50": 158.63784516,
+          "close": 179.0,
+          "ema20": 215.58864699,
+          "ema50": 159.03000202,
           "candles": 61
         }
       }
@@ -310,16 +310,16 @@
       "market": "crypto",
       "signal": "WAIT",
       "reason": "Entry/exit conditions not fully met",
-      "time": "2026-11-27T18:30:00+00:00",
-      "price": 59858.43,
-      "rsi": 38.33,
-      "ema20": 60197.13472445,
-      "ema50": 60699.61265128,
-      "macd_hist": 25.1320952,
-      "atr": 324.81731131,
-      "stop_loss": 59371.20403303,
-      "target1": 60589.26895046,
-      "target2": 61076.49491743,
+      "time": "2026-11-28T01:30:00+00:00",
+      "price": 60208.29,
+      "rsi": 61.78,
+      "ema20": 59961.54244875,
+      "ema50": 60164.91851701,
+      "macd_hist": 61.76488861,
+      "atr": 147.43931722,
+      "stop_loss": 59907.24855,
+      "target1": 60659.852175,
+      "target2": 60960.893625,
       "risk_reward_t1": 1.5,
       "volume_confirmed": false,
       "breakout": false,
@@ -353,16 +353,16 @@
       "market": "crypto",
       "signal": "WAIT",
       "reason": "Entry/exit conditions not fully met",
-      "time": "2026-11-27T18:30:00+00:00",
-      "price": 1667.74,
-      "rsi": 36.69,
-      "ema20": 1679.70200041,
-      "ema50": 1697.18603272,
-      "macd_hist": 1.00839917,
-      "atr": 10.38529598,
-      "stop_loss": 1652.16205603,
-      "target1": 1691.10691596,
-      "target2": 1706.68485993,
+      "time": "2026-11-28T01:30:00+00:00",
+      "price": 1669.52,
+      "rsi": 53.99,
+      "ema20": 1665.38383073,
+      "ema50": 1675.2722371,
+      "macd_hist": 1.88148463,
+      "atr": 4.82290924,
+      "stop_loss": 1661.1724,
+      "target1": 1682.0414,
+      "target2": 1690.389,
       "risk_reward_t1": 1.5,
       "volume_confirmed": false,
       "breakout": false,
@@ -396,16 +396,16 @@
       "market": "crypto",
       "signal": "WAIT",
       "reason": "Entry/exit conditions not fully met",
-      "time": "2026-11-27T18:30:00+00:00",
-      "price": 551.95,
-      "rsi": 40.09,
-      "ema20": 554.31375645,
-      "ema50": 557.55614601,
-      "macd_hist": 0.15288233,
-      "atr": 2.70923732,
-      "stop_loss": 547.88614402,
-      "target1": 558.04578396,
-      "target2": 562.10963994,
+      "time": "2026-11-28T01:30:00+00:00",
+      "price": 556.64,
+      "rsi": 62.66,
+      "ema20": 554.6849098,
+      "ema50": 555.32284694,
+      "macd_hist": 0.40950994,
+      "atr": 1.2625526,
+      "stop_loss": 553.8568,
+      "target1": 560.8148,
+      "target2": 563.598,
       "risk_reward_t1": 1.5,
       "volume_confirmed": false,
       "breakout": false,
@@ -439,16 +439,16 @@
       "market": "crypto",
       "signal": "WAIT",
       "reason": "Entry/exit conditions not fully met",
-      "time": "2026-11-27T18:30:00+00:00",
-      "price": 71.74,
-      "rsi": 41.32,
-      "ema20": 72.10795301,
-      "ema50": 72.39494403,
-      "macd_hist": 0.00630486,
-      "atr": 0.46197972,
-      "stop_loss": 71.04703041,
-      "target1": 72.77945438,
-      "target2": 73.47242397,
+      "time": "2026-11-28T01:30:00+00:00",
+      "price": 72.08,
+      "rsi": 57.31,
+      "ema20": 71.82167427,
+      "ema50": 72.0091533,
+      "macd_hist": 0.0703199,
+      "atr": 0.25479004,
+      "stop_loss": 71.69781494,
+      "target1": 72.65327759,
+      "target2": 73.03546264,
       "risk_reward_t1": 1.5,
       "volume_confirmed": false,
       "breakout": false,
@@ -482,18 +482,18 @@
       "market": "crypto",
       "signal": "WAIT",
       "reason": "Entry/exit conditions not fully met",
-      "time": "2026-11-27T18:30:00+00:00",
-      "price": 0.9454,
-      "rsi": 37.73,
-      "ema20": 0.95199999,
-      "ema50": 0.95885092,
-      "macd_hist": 0.00030473,
-      "atr": 0.00528488,
-      "stop_loss": 0.93747268,
-      "target1": 0.95729098,
-      "target2": 0.96521831,
+      "time": "2026-11-28T01:30:00+00:00",
+      "price": 0.9533,
+      "rsi": 59.64,
+      "ema20": 0.94954061,
+      "ema50": 0.95222715,
+      "macd_hist": 0.00101535,
+      "atr": 0.00296183,
+      "stop_loss": 0.9485335,
+      "target1": 0.96044975,
+      "target2": 0.96521625,
       "risk_reward_t1": 1.5,
-      "volume_confirmed": false,
+      "volume_confirmed": true,
       "breakout": false,
       "timeframes": {
         "daily": {
